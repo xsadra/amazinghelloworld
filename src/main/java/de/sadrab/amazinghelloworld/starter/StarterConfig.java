@@ -11,7 +11,7 @@ public class StarterConfig {
     public ApplicationRunner startHelloWorld(HelloWorld helloWorld){
         return args -> {
             String text = helloWorld.sayHelloWorld();
-            System.out.println(text);
+            System.out.println( text);
         };
     }
 }

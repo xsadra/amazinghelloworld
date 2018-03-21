@@ -1,7 +1,6 @@
 package de.sadrab.amazinghelloworld.hello;
 
-import org.hamcrest.Matchers;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +10,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(SpringExtension.class)
@@ -21,6 +21,9 @@ class HelloWorldTest {
     @Test
     void sayHelloWorld() {
         String helloWorld = this.helloWorld.sayHelloWorld();
-        assertThat(helloWorld, is(equalTo("hello world")));
+        assertEquals("hello world", helloWorld);
+        assertAll(
+                ()-> assertEquals("hello world",helloWorld)
+        );
     }
 }
