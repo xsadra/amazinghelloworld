@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -21,7 +18,7 @@ class HelloWorldTest {
     @Test
     void sayHelloWorld() {
         String helloWorld = this.helloWorld.sayHelloWorld();
-        assertEquals("hello world", helloWorld);
+//        assertEquals("hello world", helloWorld);
         assertAll(
                 ()-> assertEquals("hello world",helloWorld)
         );
